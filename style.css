@@ -1,3 +1,7 @@
+body *{
+     font-family: 'inter', sans-serif;
+}
+
 body{
 	/* ordem background:color, url, repeat, position/size  */
     background: url(./assets/backgroundMobileDark.jpg) no-repeat top center/cover;
@@ -8,4 +12,14 @@ body{
 	  height: 712px;
       border: 1px solid red;
       margin: auto;
+}
+#avatar{
+     width: 220px;
+     display: block;
+     margin: auto;
+}
+
+p{
+    text-align: center;
+    color: #FFFF;
 }
