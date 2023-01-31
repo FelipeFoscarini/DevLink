@@ -6,12 +6,22 @@
 
 body *{
      font-family: 'inter', sans-serif;
-     color: #FFFF;
+     color: var(--text-color);
+}
+
+:root{
+    --text-color: #FFFF;
+    --bg-url: url(./assets/bg-mobile-dark.jpg);
+}
+
+.light{
+   --text-color: #000;
+   --bg-url: url(./assets/bg-mobile-light.jpg);
 }
 
 body{
 	/* ordem background:color, url, repeat, position/size  */
-    background: url(./assets/backgroundMobileDark.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 #container{
@@ -22,7 +32,7 @@ body{
 }
 
 #profile img{
-    padding: 24px;
+     padding: 24px;
      margin: auto;
      width: 220px;
      display:block;
@@ -51,7 +61,7 @@ ul li a{
     padding: 16px 24px;
     
     background: rgba( 255, 255, 255, 0.1);
-    border: 1px solid rbga(255, 255, 255, 0.5);
+    border: 1px solid rbga(255, 255, 255, 0.1);
     border-radius: 8px;
 
     backdrop-filter: blur(4px);
@@ -60,21 +70,44 @@ ul li a{
     text-decoration: none;
     font-weight: 500;
 
-    transition: background 0.2s;
+    transition: background 0.3s;
 }
 
-ul li a:hover{
+ul li a:hover {
      background: rgba( 255, 255, 255, 0.05);
-     border: 1.5px solid white;
+     border: 1.5px solid var(--text-color);
 }
 
-#social-links{
+#social-links {
     display: flex;
-    gap: 32px;
+    gap: 16px;
     justify-content: center;
 
     padding: 24px 0px;
-    border: 1px solid red;
 
     font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+}
+
+#social-links a:hover {
+   border-radius: 16px;
+   background: rgba( 255, 255, 255, 0.02);
+   transition: background 0.3s;
+
+}
+
+footer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 24px 0;
+    
+   font-size: 14px;
 }
