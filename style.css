@@ -11,12 +11,22 @@ body *{
 
 :root{
     --text-color: #FFFF;
-    --bg-url: url(./assets/bg-mobile-dark.jpg);
+    --bg-url: url(./assets/backgroundMobileDark.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color: rgba( 255, 255, 255, 0.02);
+    --switch-bg-url: url(./assets/moonStars.svg);
 }
 
 .light{
    --text-color: #000;
-   --bg-url: url(./assets/bg-mobile-light.jpg);
+   --bg-url: url(./assets/backgroundMobileLight.png) ;
+   --stroke-color: border: 1px solid rgba(0, 0, 0, 0.5);
+   --surface-color: rgba(0, 0, 0, 0.05);
+   --surface-color-hover:  rgba(0, 0, 0, 0.02);
+   --highlight-color: rgba(0, 0, 0, 0.1);
+   --switch-bg-url: url(assets/sun.svg);
 }
 
 body{
@@ -31,6 +41,8 @@ body{
       margin: 56px auto 8px auto;
 }
 
+  /* Profile */
+
 #profile img{
      padding: 24px;
      margin: auto;
@@ -44,14 +56,27 @@ body{
        line-height: 24px;
 }
 
+  /* Switch */
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0px;
+    background: white var(--switch-bg-url) no-repeat center;
+}
+
+  /* Links */
+
 ul{
     list-style: none;
 
     display: flex;
     flex-direction: column;
-    padding: 24 0;
     gap: 8px;
 
+    
+    padding: 24 0;
 }
 
 ul li a{
@@ -60,8 +85,8 @@ ul li a{
     align-items: center;
     padding: 16px 24px;
     
-    background: rgba( 255, 255, 255, 0.1);
-    border: 1px solid rbga(255, 255, 255, 0.1);
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
     border-radius: 8px;
 
     backdrop-filter: blur(4px);
@@ -74,9 +99,11 @@ ul li a{
 }
 
 ul li a:hover {
-     background: rgba( 255, 255, 255, 0.05);
+     background: var(--surface-color-hover);
      border: 1.5px solid var(--text-color);
 }
+
+   /* Social Links*/
 
 #social-links {
     display: flex;
@@ -98,10 +125,12 @@ ul li a:hover {
 
 #social-links a:hover {
    border-radius: 16px;
-   background: rgba( 255, 255, 255, 0.02);
+   background:var(--highlight-color);
    transition: background 0.3s;
 
 }
+
+   /*Rodapé*/
 
 footer {
    display: flex;
@@ -111,3 +140,4 @@ footer {
     
    font-size: 14px;
 }
+
