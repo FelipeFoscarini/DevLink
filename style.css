@@ -1,15 +1,17 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body *{
+body * {
      font-family: 'inter', sans-serif;
      color: var(--text-color);
 }
 
-:root{
+    /* dark mode config */
+
+:root {
     --text-color: #FFFF;
     --bg-url: url(./assets/backgroundMobileDark.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
@@ -19,7 +21,9 @@ body *{
     --switch-bg-url: url(./assets/moonStars.svg);
 }
 
-.light{
+   /* Light mode config  */
+ 
+.light {
    --text-color: #000;
    --bg-url: url(./assets/backgroundMobileLight.png) ;
    --stroke-color: border: 1px solid rgba(0, 0, 0, 0.5);
@@ -29,46 +33,80 @@ body *{
    --switch-bg-url: url(assets/sun.svg);
 }
 
-body{
+body {
 	/* ordem background:color, url, repeat, position/size  */
     background: var(--bg-url) no-repeat top center/cover;
 }
 
-#container{
+#container {
 	  width: 360px;
 	  height: 712px;
       padding: 0px 24px;
       margin: 56px auto 8px auto;
+      border: 1px solid red;
 }
 
   /* Profile */
 
-#profile img{
+#profile img {
      padding: 24px;
      margin: auto;
      width: 220px;
      display:block;
 }
 
-#profile p{
+#profile p {
        text-align: center;
        font-weight: 500;
        line-height: 24px;
+       padding: 8px 0 24px 0;
 }
 
   /* Switch */
 
-#switch button{
+#switch {
+   position: relative;
+   width: 64px;
+
+   margin: 4px auto;
+}
+
+#switch button {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     border: 0px;
     background: white var(--switch-bg-url) no-repeat center;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    
+}
+
+.light #switch button {
+     right: 0;
+     left: initial;
+
+}
+
+#switch span {
+    display: block;
+    height: 24px;
+    width: 64px;
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
   /* Links */
 
-ul{
+ul {
     list-style: none;
 
     display: flex;
@@ -79,7 +117,9 @@ ul{
     padding: 24 0;
 }
 
-ul li a{
+   /* config link */
+
+ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
