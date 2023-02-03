@@ -184,7 +184,7 @@ footer {
 
     /*Media queries*/
 @media (min-width: 700px) {
-    :root:{
+    :root {
         --bg-url: url(./assets/backgroundDesktopDark.jpg);
     }
 
