@@ -84,11 +84,15 @@ body {
     top: 50%;
     transform: translateY(-50%);
 
-    animation: slide-back 0.4s forwards;
+    animation: slide-back 0.2s forwards;
+}
+ 
+.light #switch button {
+    animation: slide-in 0.2s forwards;
 }
 
-.light #switch button {
-    animation: slide-in 0.4s forwards;
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -180,6 +184,7 @@ footer {
 }
 
     /*Media queries*/
+    
 @media (min-width: 700px) {
     :root {
         --bg-url: url(./assets/backgroundDesktopDark.jpg);
